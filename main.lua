@@ -71,7 +71,8 @@ function love.draw()
     -- Hiển thị giá trị hiện tại và phím điều khiển
     love.graphics.print(
         string.format(
-            "Align: %.2f (1/2), Cohesion: %.2f (3/4), Separation: %.2f (5/6), Range: %d (7/8), Size: %d (9/0), Speed: %.2f",
+            "FPS: %.2f, Align: %.2f (1/2), Cohesion: %.2f (3/4), Separation: %.2f (5/6), Range: %d (7/8), Size: %d (9/0), Speed: %.2f",
+            love.timer.getFPS(),
             CONFIG.alignWeight,
             CONFIG.cohesionWeight,
             CONFIG.separationWeight,
