@@ -1,102 +1,105 @@
 ###############################################################################################################
-#####  ProFi, a lua profiler. This profile was generated on: 04/16/25 13:22:10
+#####  ProFi, a lua profiler. This profile was generated on: 04/16/25 13:33:20
 #####  ProFi is created by Luke Perkin 2012 under the MIT Licence, www.locofilm.co.uk
 #####  Version 1.3. Get the most recent version at this gist: https://gist.github.com/2838755
 ###############################################################################################################
 
-| TOTAL TIME = 11.373000
+| TOTAL TIME = 111.574000
 | FILE                                              : FUNCTION                                : LINE                : TIME        : RELATIVE    : CALLED      |
-| [love "callbacks.lua"]                            : anonymous                               :  144                : 11.286      : 99.24%      :     678     |
-| main.lua                                          : update                                  :   80                : 0.837       : 7.36%       :     677     |
-| libraries/concord/world.lua                       : emit                                    :  316                : 0.816       : 7.17%       :    1354     |
-| systems/BoidSystem.lua                            : callback                                :    7                : 0.420       : 3.69%       :     677     |
-| main.lua                                          : draw                                    :   90                : 0.318       : 2.80%       :     677     |
-| systems/RenderSystem.lua                          : callback                                :    7                : 0.251       : 2.21%       :     677     |
-| systems/BoundarySystem.lua                        : callback                                :    6                : 0.058       : 0.51%       :     677     |
-| systems/MovementSystem.lua                        : callback                                :    7                : 0.043       : 0.38%       :     677     |
-| libraries/concord/filter.lua                      : eligible                                :   72                : 0.039       : 0.34%       :     156     |
-| libraries/concord/world.lua                       : __flush                                 :  146                : 0.010       : 0.09%       :    2708     |
-| libraries/concord/type.lua                        : isCallable                              :    6                : 0.010       : 0.09%       :    2708     |
-| [love "callbacks.lua"]                            : anonymous                               :  135                : 0.005       : 0.04%       :       1     |
-| main.lua                                          : load                                    :   33                : 0.005       : 0.04%       :       1     |
-| libraries/concord/filter.lua                      : evaluate                                :  137                : 0.003       : 0.03%       :     240     |
-| libraries/concord/entity.lua                      : give                                    :   81                : 0.003       : 0.03%       :     120     |
-| libraries/concord/system.lua                      : __evaluate                              :   81                : 0.003       : 0.03%       :     240     |
-| libraries/concord/list.lua                        : add                                     :   22                : 0.002       : 0.02%       :     214     |
-| libraries/concord/utils.lua                       : loadNamespace                           :   27                : 0.002       : 0.02%       :       2     |
-| libraries/concord/init.lua                        : anonymous                               :    0                : 0.002       : 0.02%       :       1     |
-| libraries/concord/entity.lua                      : createComponent                         :   48                : 0.002       : 0.02%       :     120     |
-| libraries/concord/entity.lua                      : entity                                  :   26                : 0.002       : 0.02%       :      30     |
-| libraries/concord/world.lua                       : tryAddSystem                            :  214                : 0.001       : 0.01%       :       4     |
-| libraries/concord/world.lua                       : addSystems                              :  276                : 0.001       : 0.01%       :       1     |
-| [love "callbacks.lua"]                            : anonymous                               :   91                : 0.001       : 0.01%       :       1     |
-| components/Boid.lua                               : anonymous                               :    0                : 0.001       : 0.01%       :       1     |
-| libraries/concord/type.lua                        : isSystemClass                           :   39                : 0.001       : 0.01%       :       4     |
-| libraries/concord/world.lua                       : addEntity                               :   72                : 0.001       : 0.01%       :      30     |
-| libraries/concord/component.lua                   : __new                                   :   79                : 0.001       : 0.01%       :     120     |
-| libraries/concord/component.lua                   : __initialize                            :   95                : 0.001       : 0.01%       :     120     |
-| libraries/concord/list.lua                        : onAdded                                 :  115                : 0.001       : 0.01%       :     214     |
-| components/Velocity.lua                           : __populate                              :    3                : 0.000       : 0.00%       :      30     |
-| components/Boid.lua                               : __populate                              :    3                : 0.000       : 0.00%       :      30     |
-| [C]                                               : step                                    :   -1                : 0.000       : 0.00%       :     678     |
-| libraries/concord/type.lua                        : isWorld                                 :   53                : 0.000       : 0.00%       :      30     |
-| components/Position.lua                           : __populate                              :    3                : 0.000       : 0.00%       :      30     |
+| libraries/concord/filter.lua                      : eligible                                :   72                : 514.972     : 461.55%     :     257     |
+| [love "callbacks.lua"]                            : anonymous                               :  144                : 111.409     : 99.85%      :    1150     |
+| libraries/concord/world.lua                       : emit                                    :  316                : 108.232     : 97.00%      :    2298     |
+| main.lua                                          : update                                  :   81                : 99.756      : 89.41%      :    1149     |
+| systems/BoidSystem.lua                            : callback                                :    7                : 96.611      : 86.59%      :    1149     |
+| main.lua                                          : draw                                    :   91                : 8.993       : 8.06%       :    1149     |
+| systems/RenderSystem.lua                          : callback                                :    7                : 8.896       : 7.97%       :    1149     |
+| systems/BoundarySystem.lua                        : callback                                :    6                : 1.322       : 1.18%       :    1149     |
+| systems/MovementSystem.lua                        : callback                                :    7                : 1.232       : 1.10%       :    1149     |
+| main.lua                                          : load                                    :   34                : 0.155       : 0.14%       :       1     |
+| [love "callbacks.lua"]                            : anonymous                               :  135                : 0.155       : 0.14%       :       1     |
+| libraries/concord/world.lua                       : __flush                                 :  146                : 0.135       : 0.12%       :    4596     |
+| libraries/concord/entity.lua                      : give                                    :   81                : 0.125       : 0.11%       :    4000     |
+| libraries/concord/system.lua                      : __evaluate                              :   81                : 0.112       : 0.10%       :    8000     |
+| libraries/concord/entity.lua                      : createComponent                         :   48                : 0.082       : 0.07%       :    4000     |
+| libraries/concord/filter.lua                      : evaluate                                :  137                : 0.078       : 0.07%       :    8000     |
+| libraries/concord/entity.lua                      : entity                                  :   26                : 0.041       : 0.04%       :    1000     |
+| libraries/concord/component.lua                   : __initialize                            :   95                : 0.032       : 0.03%       :    4000     |
+| libraries/concord/entity.lua                      : __dirty                                 :  183                : 0.032       : 0.03%       :    4000     |
+| libraries/concord/world.lua                       : __dirtyEntity                           :  137                : 0.019       : 0.02%       :    4000     |
+| libraries/concord/type.lua                        : isCallable                              :    6                : 0.019       : 0.02%       :    4596     |
+| main.lua                                          : anonymous                               :  114                : 0.018       : 0.02%       :      15     |
+| libraries/concord/list.lua                        : add                                     :   22                : 0.016       : 0.01%       :    7004     |
+| libraries/concord/components.lua                  : try                                     :   34                : 0.010       : 0.01%       :    4022     |
+| libraries/concord/type.lua                        : isComponent                             :   32                : 0.010       : 0.01%       :    4000     |
+| libraries/concord/component.lua                   : __new                                   :   79                : 0.009       : 0.01%       :    4000     |
+| libraries/concord/list.lua                        : has                                     :   77                : 0.009       : 0.01%       :   12000     |
+| libraries/concord/world.lua                       : addEntity                               :   72                : 0.005       : 0.00%       :    1000     |
+| components/Position.lua                           : __populate                              :    3                : 0.003       : 0.00%       :    1000     |
+| components/Velocity.lua                           : __populate                              :    3                : 0.002       : 0.00%       :    1000     |
+| libraries/concord/list.lua                        : onAdded                                 :  115                : 0.002       : 0.00%       :    7004     |
+| libraries/concord/init.lua                        : anonymous                               :    0                : 0.002       : 0.00%       :       1     |
+| libraries/concord/type.lua                        : isWorld                                 :   53                : 0.002       : 0.00%       :    1000     |
+| libraries/concord/type.lua                        : isEntity                                :   18                : 0.002       : 0.00%       :    1000     |
+| components/Boid.lua                               : __populate                              :    3                : 0.002       : 0.00%       :    1000     |
+| libraries/concord/utils.lua                       : loadNamespace                           :   27                : 0.002       : 0.00%       :       2     |
+| libraries/concord/world.lua                       : addSystems                              :  276                : 0.001       : 0.00%       :       1     |
+| libraries/concord/world.lua                       : onEntityAdded                           :  486                : 0.001       : 0.00%       :    1000     |
+| libraries/concord/world.lua                       : tryAddSystem                            :  214                : 0.001       : 0.00%       :       4     |
+| [C]                                               : yield                                   :   -1                : 0.000       : 0.00%       :    1150     |
+| [C]                                               : pump                                    :   -1                : 0.000       : 0.00%       :    1150     |
+| [C]                                               : step                                    :   -1                : 0.000       : 0.00%       :    1150     |
 | [love "boot.lua"]                                 : anonymous                               :  355                : 0.000       : 0.00%       :       0     |
-| [C]                                               : yield                                   :   -1                : 0.000       : 0.00%       :     678     |
-| libraries/concord/type.lua                        : isEntity                                :   18                : 0.000       : 0.00%       :      30     |
-| libraries/concord/list.lua                        : has                                     :   77                : 0.000       : 0.00%       :     360     |
-| libraries/concord/world.lua                       : __dirtyEntity                           :  137                : 0.000       : 0.00%       :     120     |
-| libraries/concord/entity.lua                      : entity                                  :  278                : 0.000       : 0.00%       :      30     |
-| libraries/concord/component.lua                   : __populate                              :   51                : 0.000       : 0.00%       :      30     |
-| libraries/concord/entity.lua                      : give                                    :  128                : 0.000       : 0.00%       :     120     |
-| libraries/concord/type.lua                        : isComponent                             :   32                : 0.000       : 0.00%       :     120     |
-| libraries/concord/entity.lua                      : __dirty                                 :  183                : 0.000       : 0.00%       :     120     |
-| libraries/ProFi.lua                               : startHooks                              :  234                : 0.000       : 0.00%       :       0     |
-| [love "wrap_Event.lua"]                           : poll                                    :   25                : 0.000       : 0.00%       :     678     |
-| [C]                                               : translate                               :   -1                : 0.000       : 0.00%       :   20310     |
-| [C]                                               : rotate                                  :   -1                : 0.000       : 0.00%       :   20310     |
-| [C]                                               : push                                    :   -1                : 0.000       : 0.00%       :   20310     |
-| [C]                                               : clear                                   :   -1                : 0.000       : 0.00%       :     677     |
-| [C]                                               : atan2                                   :   -1                : 0.000       : 0.00%       :   20310     |
-| [C]                                               : getBackgroundColor                      :   -1                : 0.000       : 0.00%       :     677     |
-| [C]                                               : polygon                                 :   -1                : 0.000       : 0.00%       :   20310     |
-| [C]                                               : present                                 :   -1                : 0.000       : 0.00%       :     677     |
-| libraries/ProFi.lua                               : shouldReturn                            :  199                : 0.000       : 0.00%       :       1     |
-| [C]                                               : pop                                     :   -1                : 0.000       : 0.00%       :   20310     |
-| libraries/ProFi.lua                               : stop                                    :   85                : 0.000       : 0.00%       :       1     |
-| [C]                                               : sleep                                   :   -1                : 0.000       : 0.00%       :     677     |
-| main.lua                                          : quit                                    :  106                : 0.000       : 0.00%       :       1     |
-| [C]                                               : pump                                    :   -1                : 0.000       : 0.00%       :     678     |
-| [C]                                               : origin                                  :   -1                : 0.000       : 0.00%       :     677     |
-| [C]                                               : print                                   :   -1                : 0.000       : 0.00%       :    1354     |
-| [love "callbacks.lua"]                            : anonymous                               :   43                : 0.000       : 0.00%       :       6     |
-| [C]                                               : sin                                     :   -1                : 0.000       : 0.00%       :      30     |
-| [love "callbacks.lua"]                            : anonymous                               :   94                : 0.000       : 0.00%       :       2     |
+| libraries/concord/entity.lua                      : give                                    :  128                : 0.000       : 0.00%       :    4000     |
+| [love "wrap_Event.lua"]                           : poll                                    :   25                : 0.000       : 0.00%       :    1150     |
+| libraries/concord/component.lua                   : __populate                              :   51                : 0.000       : 0.00%       :    1000     |
 | [love "callbacks.lua"]                            : anonymous                               :   97                : 0.000       : 0.00%       :       1     |
-| [love "callbacks.lua"]                            : anonymous                               :   40                : 0.000       : 0.00%       :       1     |
-| [C]                                               : isActive                                :   -1                : 0.000       : 0.00%       :     677     |
-| [C]                                               : getmetatable                            :   -1                : 0.000       : 0.00%       :    2708     |
-| libraries/concord/world.lua                       : onEntityAdded                           :  486                : 0.000       : 0.00%       :      30     |
-| [C]                                               : sqrt                                    :   -1                : 0.000       : 0.00%       :   78707     |
-| libraries/concord/filter.lua                      : eligible                                :  133                : 0.000       : 0.00%       :     240     |
-| [C]                                               : floor                                   :   -1                : 0.000       : 0.00%       :   81240     |
+| libraries/ProFi.lua                               : startHooks                              :  234                : 0.000       : 0.00%       :       0     |
+| [love "callbacks.lua"]                            : anonymous                               :   40                : 0.000       : 0.00%       :       2     |
+| [C]                                               : pop                                     :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : present                                 :   -1                : 0.000       : 0.00%       :    1149     |
+| [C]                                               : polygon                                 :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : translate                               :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : rotate                                  :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : push                                    :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : sleep                                   :   -1                : 0.000       : 0.00%       :    1149     |
+| [love "callbacks.lua"]                            : anonymous                               :   37                : 0.000       : 0.00%       :      15     |
+| libraries/ProFi.lua                               : shouldReturn                            :  199                : 0.000       : 0.00%       :       1     |
+| [love "callbacks.lua"]                            : anonymous                               :   31                : 0.000       : 0.00%       :      15     |
+| libraries/ProFi.lua                               : stop                                    :   85                : 0.000       : 0.00%       :       1     |
+| [love "callbacks.lua"]                            : anonymous                               :   34                : 0.000       : 0.00%       :      15     |
+| main.lua                                          : quit                                    :  108                : 0.000       : 0.00%       :       1     |
+| [love "callbacks.lua"]                            : anonymous                               :   91                : 0.000       : 0.00%       :       3     |
+| [C]                                               : atan2                                   :   -1                : 0.000       : 0.00%       : 1149000     |
+| [C]                                               : getBackgroundColor                      :   -1                : 0.000       : 0.00%       :    1149     |
+| [C]                                               : getmetatable                            :   -1                : 0.000       : 0.00%       :    4596     |
+| libraries/concord/filter.lua                      : eligible                                :  133                : 0.000       : 0.00%       :    8000     |
+| libraries/concord/entity.lua                      : entity                                  :  278                : 0.000       : 0.00%       :    1000     |
+| [love "callbacks.lua"]                            : anonymous                               :   94                : 0.000       : 0.00%       :       6     |
+| [love "callbacks.lua"]                            : anonymous                               :   43                : 0.000       : 0.00%       :      15     |
+| [C]                                               : clear                                   :   -1                : 0.000       : 0.00%       :    1149     |
 | libraries/concord/list.lua                        : clear                                   :   61                : 0.000       : 0.00%       :       3     |
-| [C]                                               : cos                                     :   -1                : 0.000       : 0.00%       :      30     |
-| [love "arg.lua"]                                  : getLow                                  :  105                : 0.000       : 0.00%       :       1     |
-| [C]                                               : random                                  :   -1                : 0.000       : 0.00%       :      90     |
+| [C]                                               : sqrt                                    :   -1                : 0.000       : 0.00%       : 11216091    |
+| [C]                                               : origin                                  :   -1                : 0.000       : 0.00%       :    1149     |
+| [C]                                               : floor                                   :   -1                : 0.000       : 0.00%       : 4596000     |
+| [C]                                               : isActive                                :   -1                : 0.000       : 0.00%       :    1149     |
+| [C]                                               : print                                   :   -1                : 0.000       : 0.00%       :    2298     |
+| [C]                                               : sin                                     :   -1                : 0.000       : 0.00%       :    1000     |
+| [C]                                               : getWidth                                :   -1                : 0.000       : 0.00%       :    3298     |
+| [C]                                               : getHeight                               :   -1                : 0.000       : 0.00%       :    3298     |
 | libraries/concord/filter.lua                      : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/list.lua                        : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/world.lua                       : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/system.lua                      : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
-| [C]                                               : setmetatable                            :   -1                : 0.000       : 0.00%       :     169     |
+| [C]                                               : setmetatable                            :   -1                : 0.000       : 0.00%       :    5019     |
 | libraries/concord/builtins/key.lua                : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
-| [C]                                               : rawget                                  :   -1                : 0.000       : 0.00%       :     148     |
+| [C]                                               : rawget                                  :   -1                : 0.000       : 0.00%       :    4028     |
 | [C]                                               : getInfo                                 :   -1                : 0.000       : 0.00%       :      10     |
-| [C]                                               : ipairs                                  :   -1                : 0.000       : 0.00%       :   46651     |
+| [C]                                               : ipairs                                  :   -1                : 0.000       : 0.00%       : 9258000     |
+| libraries/concord/component.lua                   : component                               :  117                : 0.000       : 0.00%       :       4     |
 | libraries/concord/component.lua                   : component                               :   17                : 0.000       : 0.00%       :       4     |
 | [C]                                               : getDirectoryItems                       :   -1                : 0.000       : 0.00%       :       2     |
-| libraries/concord/component.lua                   : component                               :  117                : 0.000       : 0.00%       :       4     |
-| [C]                                               : (for generator)                         :   -1                : 0.000       : 0.00%       :  205594     |
+| components/Boid.lua                               : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
+| [C]                                               : (for generator)                         :   -1                : 0.000       : 0.00%       : 60596068    |
 | [C]                                               : sub                                     :   -1                : 0.000       : 0.00%       :       8     |
 | components/Physics.lua                            : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | [C]                                               : match                                   :   -1                : 0.000       : 0.00%       :      36     |
@@ -105,9 +108,9 @@
 | [C]                                               : gsub                                    :   -1                : 0.000       : 0.00%       :      17     |
 | libraries/concord/entity.lua                      : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | [C]                                               : require                                 :   -1                : 0.000       : 0.00%       :      49     |
-| [C]                                               : getTime                                 :   -1                : 0.000       : 0.00%       :    1356     |
+| [C]                                               : getTime                                 :   -1                : 0.000       : 0.00%       :    2300     |
 | libraries/ProFi.lua                               : start                                   :   67                : 0.000       : 0.00%       :       0     |
-| [C]                                               : type                                    :   -1                : 0.000       : 0.00%       :    4417     |
+| [C]                                               : type                                    :   -1                : 0.000       : 0.00%       :   16949     |
 | libraries/concord/components.lua                  : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/utils.lua                       : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/component.lua                   : Component                               :  117                : 0.000       : 0.00%       :       2     |
@@ -115,37 +118,38 @@
 | libraries/concord/component.lua                   : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/builtins/init.lua               : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | libraries/concord/builtins/serializable.lua       : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
-| [C]                                               : getHeight                               :   -1                : 0.000       : 0.00%       :    1384     |
+| [C]                                               : cos                                     :   -1                : 0.000       : 0.00%       :    1000     |
 | components/Position.lua                           : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | systems/BoidSystem.lua                            : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
-| libraries/concord/filter.lua                      : parse                                   :   56                : 0.000       : 0.00%       :       4     |
 | libraries/concord/filter.lua                      : onComponent                             :   59                : 0.000       : 0.00%       :      11     |
-| [C]                                               : insert                                  :   -1                : 0.000       : 0.00%       :   20366     |
+| [C]                                               : insert                                  :   -1                : 0.000       : 0.00%       : 1150026     |
+| libraries/concord/system.lua                      : init                                    :  144                : 0.000       : 0.00%       :       4     |
+| libraries/concord/filter.lua                      : parse                                   :   56                : 0.000       : 0.00%       :       4     |
+| libraries/concord/filter.lua                      : Filter                                  :  196                : 0.000       : 0.00%       :       4     |
 | libraries/concord/filter.lua                      : Filter                                  :  106                : 0.000       : 0.00%       :       4     |
 | libraries/concord/system.lua                      : systemClass                             :   17                : 0.000       : 0.00%       :       4     |
-| libraries/concord/filter.lua                      : Filter                                  :  196                : 0.000       : 0.00%       :       4     |
-| [C]                                               : select                                  :   -1                : 0.000       : 0.00%       :       5     |
-| libraries/concord/system.lua                      : init                                    :  144                : 0.000       : 0.00%       :       4     |
-| [love "boot.lua"]                                 : anonymous                               :  126                : 0.000       : 0.00%       :       0     |
-| [C]                                               : getWidth                                :   -1                : 0.000       : 0.00%       :    1384     |
 | main.lua                                          : anonymous                               :    0                : 0.000       : 0.00%       :       0     |
+| [C]                                               : xpcall                                  :   -1                : 0.000       : 0.00%       :    1151     |
+| [C]                                               : random                                  :   -1                : 0.000       : 0.00%       :    3000     |
+| [love "boot.lua"]                                 : anonymous                               :  126                : 0.000       : 0.00%       :       0     |
 | libraries/ProFi.lua                               : stopHooks                               :  238                : 0.000       : 0.00%       :       1     |
-| [C]                                               : xpcall                                  :   -1                : 0.000       : 0.00%       :     679     |
 | [love "arg.lua"]                                  : parseGameArguments                      :  169                : 0.000       : 0.00%       :       1     |
+| [love "arg.lua"]                                  : getLow                                  :  105                : 0.000       : 0.00%       :       1     |
 | components/Velocity.lua                           : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
+| libraries/concord/type.lua                        : isSystemClass                           :   39                : 0.000       : 0.00%       :       4     |
 | [C]                                               : List                                    :   -1                : 0.000       : 0.00%       :      12     |
-| libraries/concord/list.lua                        : List                                    :  124                : 0.000       : 0.00%       :      12     |
 | libraries/concord/filter.lua                      : validate                                :   22                : 0.000       : 0.00%       :       8     |
-| [C]                                               : format                                  :   -1                : 0.000       : 0.00%       :    1362     |
+| [C]                                               : format                                  :   -1                : 0.000       : 0.00%       :    2306     |
+| libraries/concord/utils.lua                       : shallowCopy                             :   13                : 0.000       : 0.00%       :      13     |
 | [C]                                               : pairs                                   :   -1                : 0.000       : 0.00%       :      26     |
 | libraries/concord/system.lua                      : system                                  :  156                : 0.000       : 0.00%       :       4     |
 | libraries/concord/system.lua                      : system                                  :   50                : 0.000       : 0.00%       :       4     |
-| libraries/concord/list.lua                        : List                                    :   11                : 0.000       : 0.00%       :      12     |
-| libraries/concord/components.lua                  : try                                     :   34                : 0.000       : 0.00%       :     142     |
+| [C]                                               : select                                  :   -1                : 0.000       : 0.00%       :       5     |
 | systems/BoundarySystem.lua                        : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
-| libraries/concord/world.lua                       : world                                   :   31                : 0.000       : 0.00%       :       1     |
-| libraries/concord/utils.lua                       : shallowCopy                             :   13                : 0.000       : 0.00%       :      13     |
-| libraries/concord/world.lua                       : world                                   :  511                : 0.000       : 0.00%       :       1     |
-| systems/MovementSystem.lua                        : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
 | systems/RenderSystem.lua                          : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
+| libraries/concord/list.lua                        : List                                    :   11                : 0.000       : 0.00%       :      12     |
+| systems/MovementSystem.lua                        : anonymous                               :    0                : 0.000       : 0.00%       :       1     |
+| libraries/concord/list.lua                        : List                                    :  124                : 0.000       : 0.00%       :      12     |
+| libraries/concord/world.lua                       : world                                   :  511                : 0.000       : 0.00%       :       1     |
+| libraries/concord/world.lua                       : world                                   :   31                : 0.000       : 0.00%       :       1     |
 | [C]                                               : sethook                                 :   -1                : 0.000       : 0.00%       :       1     |

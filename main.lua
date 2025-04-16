@@ -18,7 +18,7 @@ world:addSystems(
     require("systems.RenderSystem")
 )
 
-local NUM_BOIDS = 30
+local NUM_BOIDS = 1000
 local boids = {}
 -- Global config cho boid
 CONFIG = {
@@ -27,31 +27,11 @@ CONFIG = {
     cohesionWeight = 0.8,
     separationWeight = 2.0,
     visualRange = 50,
-    separationDistance = 30
+    separationDistance = 30,
+    speedMultiplier = 1.0
 }
 
 function love.load()
-    -- for i = 1, NUM_BOIDS do
-    --     local x = math.random(50, love.graphics.getWidth()-50)
-    --     local y = math.random(50, love.graphics.getHeight()-50)
-    --     local angle = math.random() * 2 * math.pi
-    --     local dx = math.cos(angle) * 50
-    --     local dy = math.sin(angle) * 50
-
-    --     -- Tạo entity boid với các component Position, Velocity, Boid
-    --     local entity = Concord.entity(world)
-    --         :give("position", x, y)
-    --         :give("velocity", dx, dy)
-    --         :give("boid", {visualRange = 50, maxSpeed = 100, maxForce = 50, separationDistance = 30})
-
-    --     -- Tạo physics body cho boid (là một tam giác cân, đỉnh hướng lên trên)
-    --     local body = love.physics.newBody(physicsWorld, x, y, "dynamic")
-    --     body:setMass(1)
-    --     local shape = love.physics.newPolygonShape(0, -10, -7, 10, 7, 10)  -- tam giác: đỉnh ở (0,-10)
-    --     local fixture = love.physics.newFixture(body, shape)
-    --     entity:give("physics", body, shape, fixture)
-    --     table.insert(boids, entity)
-    -- end
     for i = 1, NUM_BOIDS do
         local x = math.random(50, love.graphics.getWidth() - 50)
         local y = math.random(50, love.graphics.getHeight() - 50)
@@ -91,12 +71,13 @@ function love.draw()
     -- Hiển thị giá trị hiện tại và phím điều khiển
     love.graphics.print(
         string.format(
-            "Align: %.2f (1/2), Cohesion: %.2f (3/4), Separation: %.2f (5/6), Range: %d (7/8), Size: %d (9/0)",
+            "Align: %.2f (1/2), Cohesion: %.2f (3/4), Separation: %.2f (5/6), Range: %d (7/8), Size: %d (9/0), Speed: %.2f",
             CONFIG.alignWeight,
             CONFIG.cohesionWeight,
             CONFIG.separationWeight,
             CONFIG.visualRange,
-            CONFIG.boidSize
+            CONFIG.boidSize,
+            CONFIG.speedMultiplier
         ),
         10, 10
     )
@@ -130,7 +111,14 @@ function love.keypressed(key)
         CONFIG.boidSize = CONFIG.boidSize + 1
     elseif key == "0" then
         CONFIG.boidSize = math.max(1, CONFIG.boidSize - 1)
+    elseif key == "-" then
+        CONFIG.speedMultiplier = CONFIG.speedMultiplier - 0.1
+        -- print("Speed:", CONFIG.speedMultiplier)
+    elseif key == "=" then
+        CONFIG.speedMultiplier = CONFIG.speedMultiplier + 0.1
+        -- print("Speed:", CONFIG.speedMultiplier)
     end
+
     -- Cập nhật component boid cho tất cả entities
     for _, e in ipairs(boids) do
         e.boid.alignWeight = CONFIG.alignWeight
