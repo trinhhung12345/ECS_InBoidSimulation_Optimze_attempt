@@ -14,7 +14,6 @@ function RenderSystem:draw()
     love.graphics.rotate(angle)
 
     local s = e.boid.size or 5
-    -- Vẽ tam giác boid
     love.graphics.polygon("fill",
       -s, -s/2,
       -s,  s/2,

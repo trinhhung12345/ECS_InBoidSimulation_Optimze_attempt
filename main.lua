@@ -18,7 +18,7 @@ world:addSystems(
     require("systems.RenderSystem")
 )
 
-local NUM_BOIDS = 1000
+local NUM_BOIDS = 30
 local boids = {}
 -- Global config cho boid
 CONFIG = {
